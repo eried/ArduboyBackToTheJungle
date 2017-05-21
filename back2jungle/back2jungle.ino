@@ -2,6 +2,7 @@
 #include <ArduboyPlaytune.h>
 #include <PGMWrap.h>
 
+#include "EEPROMAnything.h"
 #include "music.h"
 #include "sprites.h"
 #include "phrases.h"
@@ -26,9 +27,10 @@ int FORWARD_BOOST = 12; // Use higher value to make the player jump further.
 
 char lives = STARTLIVES;
 
-unsigned long currentFrame = 0;
-byte currentLevel = STARTINGLEVEL, gameState = SPLASH;//*/STARTLEVEL;
+unsigned long currentFrame = 0, elapsedTime = 0;
+byte currentLevel = STARTINGLEVEL, gameState =/* SPLASH;//*/MAINMENU;
 unsigned long wait = 0, debounce = 0;
+char specialCar;
 double playerx, playery;
 
 void setup() {

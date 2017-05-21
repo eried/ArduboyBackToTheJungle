@@ -84,9 +84,9 @@ const enemy enemies[] PROGMEM =
   { TRUCK, 22, 200, -0.31 },
 
   // Level 4
-  { SLIMBIKE, 13, 300, -0.04},
+  { SLIMBIKE, 11, 300, -0.04},
   { BIKE, 83, 0, -0.3 },
-  { BIKE, 84, 200, -0.3 },
+  { BIKE, 90, 200, -0.3 },
   { CAR, 103, 0, -0.15 },
   { CAR, 103, 220, -0.15 },
   { CAR, 22, 0, -0.3 },

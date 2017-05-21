@@ -70,11 +70,12 @@ void loop()
     case STARTLEVEL:
       for (byte i = 0; i < enemiesMax; i++)
         enemiesPos[i] = arduboy.height();
-
+      
       tunes.playScore(levelintro);
       playerx = INVALID;
       playery = INVALID;
       currentFrame = 0;
+      specialCar = -1;
 
     case STARTLEVELINTRO:
       if (playerx != INVALID)
