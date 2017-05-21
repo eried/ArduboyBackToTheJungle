@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<seqview xscroll="0.000000" yscroll="0" zoom="25">
+<sequence maintempo="300" measureAmount="98" currentTrack="0" beatResolution="480" internalName="Untitled" fileFormatVersion="4" channelManagement="manual" metronome="false">
+
+<measure  firstMeasure="0">
+<timesig num="4" denom="4" measure="0"/>
+<timesig num="4" denom="4" measure="44"/>
+</measure>
+
+<tempo>
+  <controlevent type="201" tick="84480" value="52.89473724"/>
+</tempo>
+<text>
+</text>
+<copyright>
+</copyright>
+<defaultkeysig keytype="1" keysymbolamount="2" />
+
+
+<track name="Untitled" id="0" channel="0" muted="false" soloed="true" volume="100" default_volume="80">
+  <key type="flats" value="2" />
+  <editors height="543">
+    <score enabled="false" musical_notation="true" linear_notation="true" g_clef="true" f_clef="true" scroll="0.547945"/>
+    <keyboard enabled="true" scroll="0.428184" proportion="1.000000"/>
+    <guitar enabled="false"/>
+    <drum enabled="false" scroll="0.000000"/>
+    <controller enabled="false" controller="7"/>
+  </editors>
+  <magneticgrid divider="8" triplet="false" dotted="false"/>
+  <instrument id="0"/>
+  <drumkit id="0" collapseView="false"/>
+  <guitartuning  string0="67" string1="72" string2="76" string3="81" string4="86" string5="91"/>
+
+  <note pitch="68" start="0" end="227" volume="80" selected="true"/>
+  <note pitch="64" start="240" end="467" volume="80" selected="true"/>
+  <note pitch="56" start="480" end="707" volume="80" selected="true"/>
+  <note pitch="59" start="720" end="947" volume="80" selected="true"/>
+  <note pitch="68" start="960" end="1187" volume="80" selected="true"/>
+  <note pitch="64" start="1200" end="1427" volume="80" selected="true"/>
+  <note pitch="56" start="1440" end="1667" volume="80" selected="true"/>
+  <note pitch="59" start="1680" end="1907" volume="80" selected="true"/>
+  <note pitch="68" start="1920" end="2147" volume="80" selected="true"/>
+  <note pitch="64" start="2160" end="2387" volume="80" selected="true"/>
+  <note pitch="56" start="2400" end="2627" volume="80" selected="true"/>
+  <note pitch="59" start="2640" end="2867" volume="80" selected="true"/>
+  <note pitch="68" start="2880" end="3107" volume="80" selected="true"/>
+  <note pitch="64" start="3120" end="3347" volume="80" selected="true"/>
+  <note pitch="56" start="3360" end="3587" volume="80" selected="true"/>
+  <note pitch="59" start="3600" end="3827" volume="80" selected="true"/>
+  <note pitch="68" start="3840" end="4067" volume="80" selected="true"/>
+  <note pitch="64" start="4080" end="4307" volume="80" selected="true"/>
+  <note pitch="56" start="4320" end="4547" volume="80" selected="true"/>
+  <note pitch="59" start="4560" end="4787" volume="80" selected="true"/>
+  <note pitch="68" start="4800" end="5027" volume="80" selected="true"/>
+  <note pitch="64" start="5040" end="5267" volume="80" selected="true"/>
+  <note pitch="56" start="5280" end="5507" volume="80" selected="true"/>
+  <note pitch="59" start="5520" end="5747" volume="80" selected="true"/>
+  <note pitch="69" start="5760" end="5987" volume="80" selected="true"/>
+  <note pitch="64" start="6000" end="6227" volume="80" selected="true"/>
+  <note pitch="56" start="6240" end="6467" volume="80" selected="true"/>
+  <note pitch="59" start="6480" end="6707" volume="80" selected="true"/>
+  <note pitch="71" start="6720" end="6947" volume="80" selected="true"/>
+  <note pitch="64" start="6960" end="7187" volume="80" selected="true"/>
+  <note pitch="56" start="7200" end="7427" volume="80" selected="true"/>
+  <note pitch="59" start="7440" end="7667" volume="80" selected="true"/>
+  <note pitch="66" start="7680" end="7907" volume="80" selected="true"/>
+  <note pitch="63" start="7920" end="8147" volume="80" selected="true"/>
+  <note pitch="54" start="8160" end="8387" volume="80" selected="true"/>
+  <note pitch="59" start="8400" end="8627" volume="80" selected="true"/>
+  <note pitch="66" start="8640" end="8867" volume="80" selected="true"/>
+  <note pitch="63" start="8880" end="9107" volume="80" selected="true"/>
+  <note pitch="54" start="9120" end="9347" volume="80" selected="true"/>
+  <note pitch="59" start="9360" end="9587" volume="80" selected="true"/>
+  <note pitch="66" start="9600" end="9827" volume="80" selected="true"/>
+  <note pitch="63" start="9840" end="10067" volume="80" selected="true"/>
+  <note pitch="54" start="10080" end="10307" volume="80" selected="true"/>
+  <note pitch="59" start="10320" end="10547" volume="80" selected="true"/>
+  <note pitch="66" start="10560" end="10787" volume="80" selected="true"/>
+  <note pitch="63" start="10800" end="11027" volume="80" selected="true"/>
+  <note pitch="54" start="11040" end="11267" volume="80" selected="true"/>
+  <note pitch="59" start="11280" end="11507" volume="80" selected="true"/>
+  <note pitch="66" start="11520" end="11747" volume="80" selected="true"/>
+  <note pitch="63" start="11760" end="11987" volume="80" selected="true"/>
+  <note pitch="54" start="12000" end="12227" volume="80" selected="true"/>
+  <note pitch="59" start="12240" end="12467" volume="80" selected="true"/>
+  <note pitch="66" start="12480" end="12707" volume="80" selected="true"/>
+  <note pitch="63" start="12720" end="12947" volume="80" selected="true"/>
+  <note pitch="54" start="12960" end="13187" volume="80" selected="true"/>
+  <note pitch="59" start="13200" end="13427" volume="80" selected="true"/>
+  <note pitch="68" start="13440" end="13667" volume="80" selected="true"/>
+  <note pitch="63" start="13680" end="13907" volume="80" selected="true"/>
+  <note pitch="54" start="13920" end="14147" volume="80" selected="true"/>
+  <note pitch="59" start="14160" end="14387" volume="80" selected="true"/>
+  <note pitch="66" start="14400" end="14627" volume="80" selected="true"/>
+  <note pitch="63" start="14640" end="14867" volume="80" selected="true"/>
+  <note pitch="54" start="14880" end="15107" volume="80" selected="true"/>
+  <note pitch="59" start="15120" end="15347" volume="80" selected="true"/>
+  <note pitch="64" start="15360" end="15587" volume="80" selected="true"/>
+  <note pitch="61" start="15600" end="15827" volume="80" selected="true"/>
+  <note pitch="52" start="15840" end="16067" volume="80" selected="true"/>
+  <note pitch="56" start="16080" end="16307" volume="80" selected="true"/>
+  <note pitch="64" start="16320" end="16547" volume="80" selected="true"/>
+  <note pitch="61" start="16560" end="16787" volume="80" selected="true"/>
+  <note pitch="52" start="16800" end="17027" volume="80" selected="true"/>
+  <note pitch="56" start="17040" end="17267" volume="80" selected="true"/>
+  <note pitch="64" start="17280" end="17507" volume="80" selected="true"/>
+  <note pitch="61" start="17520" end="17747" volume="80" selected="true"/>
+  <note pitch="52" start="17760" end="17987" volume="80" selected="true"/>
+  <note pitch="56" start="18000" end="18227" volume="80" selected="true"/>
+  <note pitch="64" start="18240" end="18467" volume="80" selected="true"/>
+  <note pitch="61" start="18480" end="18707" volume="80" selected="true"/>
+  <note pitch="52" start="18720" end="18947" volume="80" selected="true"/>
+  <note pitch="56" start="18960" end="19187" volume="80" selected="true"/>
+  <note pitch="64" start="19200" end="19427" volume="80" selected="true"/>
+  <note pitch="61" start="19440" end="19667" volume="80" selected="true"/>
+  <note pitch="52" start="19680" end="19907" volume="80" selected="true"/>
+  <note pitch="56" start="19920" end="20147" volume="80" selected="true"/>
+  <note pitch="64" start="20160" end="20387" volume="80" selected="true"/>
+  <note pitch="61" start="20400" end="20627" volume="80" selected="true"/>
+  <note pitch="52" start="20640" end="20867" volume="80" selected="true"/>
+  <note pitch="56" start="20880" end="21107" volume="80" selected="true"/>
+  <note pitch="63" start="21120" end="21347" volume="80" selected="true"/>
+  <note pitch="59" start="21360" end="21587" volume="80" selected="true"/>
+  <note pitch="52" start="21600" end="21827" volume="80" selected="true"/>
+  <note pitch="56" start="21840" end="22067" volume="80" selected="true"/>
+  <note pitch="64" start="22080" end="22307" volume="80" selected="true"/>
+  <note pitch="61" start="22320" end="22547" volume="80" selected="true"/>
+  <note pitch="52" start="22560" end="22787" volume="80" selected="true"/>
+  <note pitch="56" start="22800" end="23027" volume="80" selected="true"/>
+  <note pitch="66" start="23040" end="23267" volume="80" selected="true"/>
+  <note pitch="63" start="23280" end="23507" volume="80" selected="true"/>
+  <note pitch="54" start="23520" end="23747" volume="80" selected="true"/>
+  <note pitch="59" start="23760" end="23987" volume="80" selected="true"/>
+  <note pitch="66" start="24000" end="24227" volume="80" selected="true"/>
+  <note pitch="63" start="24240" end="24467" volume="80" selected="true"/>
+  <note pitch="54" start="24480" end="24707" volume="80" selected="true"/>
+  <note pitch="59" start="24720" end="24947" volume="80" selected="true"/>
+  <note pitch="66" start="24960" end="25187" volume="80" selected="true"/>
+  <note pitch="63" start="25200" end="25427" volume="80" selected="true"/>
+  <note pitch="54" start="25440" end="25667" volume="80" selected="true"/>
+  <note pitch="59" start="25680" end="25907" volume="80" selected="true"/>
+  <note pitch="66" start="25920" end="26147" volume="80" selected="true"/>
+  <note pitch="63" start="26160" end="26387" volume="80" selected="true"/>
+  <note pitch="54" start="26400" end="26627" volume="80" selected="true"/>
+  <note pitch="59" start="26640" end="26867" volume="80" selected="true"/>
+  <controlevent type="10" tick="0" value="63.00000000"/>
+  <controlevent type="91" tick="0" value="127.00000000"/>
+  <controlevent type="93" tick="0" value="127.00000000"/>
+  <controlevent type="7" tick="0" value="27.00000000"/>
+</track>
+
+</sequence></seqview>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<seqview xscroll="0.000000" yscroll="0" zoom="100">
+<sequence maintempo="120" measureAmount="2" currentTrack="0" beatResolution="480" internalName="Untitled" fileFormatVersion="4" channelManagement="auto" metronome="false">
+
+<measure  firstMeasure="0" denom="8" num="6"/>
+
+<tempo>
+</tempo>
+<text>
+</text>
+<copyright>
+</copyright>
+<defaultkeysig keytype="2" keysymbolamount="0" />
+
+
+<track name="Untitled" id="0" channel="0" muted="false" soloed="true" volume="100" default_volume="80">
+  <key type="C" />
+  <editors height="427">
+    <score enabled="false" musical_notation="true" linear_notation="true" g_clef="true" f_clef="true" scroll="0.547945"/>
+    <keyboard enabled="true" scroll="0.326106" proportion="1.000000"/>
+    <guitar enabled="false"/>
+    <drum enabled="false" scroll="0.000000"/>
+    <controller enabled="false" controller="7"/>
+  </editors>
+  <magneticgrid divider="8" triplet="false" dotted="false"/>
+  <instrument id="73"/>
+  <drumkit id="0" collapseView="false"/>
+  <guitartuning  string0="67" string1="72" string2="76" string3="81" string4="86" string5="91"/>
+
+  <note pitch="45" start="0" end="239" volume="80"/>
+  <note pitch="54" start="0" end="239" volume="80" fret="13" string="0" selected="true"/>
+  <note pitch="45" start="720" end="959" volume="80"/>
+  <note pitch="54" start="720" end="959" volume="80" fret="13" string="0" selected="true"/>
+  <note pitch="45" start="960" end="1199" volume="80"/>
+  <note pitch="54" start="960" end="1199" volume="80" fret="13" string="0" selected="true"/>
+  <note pitch="47" start="1200" end="1439" volume="80"/>
+  <note pitch="55" start="1200" end="1439" volume="80" fret="12" string="0" selected="true"/>
+  <note pitch="45" start="1440" end="2159" volume="80"/>
+  <note pitch="53" start="1440" end="2159" volume="80" fret="14" string="0" selected="true"/>
+  <controlevent type="7" tick="2" value="27.00000000"/>
+  <controlevent type="10" tick="4" value="63.00000000"/>
+  <controlevent type="91" tick="6" value="97.00000000"/>
+  <controlevent type="93" tick="8" value="97.00000000"/>
+</track>
+
+</sequence></seqview>
