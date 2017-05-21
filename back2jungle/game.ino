@@ -115,8 +115,9 @@ int doGame(bool interactive)
         if (specialCar == e)
           specialCar = -1;
         else if (specialCar == -1 && enemies[e].type == CAR)
-          if (random(0, 30) == 7)
+          if (random(0, 50) == 7)
           {
+            score += 500;
             tunes.stopScore();
             tunes.playScore(car2music);
             specialCar = e;
