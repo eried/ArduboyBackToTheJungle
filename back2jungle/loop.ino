@@ -47,11 +47,12 @@ void loop()
         arduboy.print("Hi-score: ");
         arduboy.print(highscore);
         arduboy.display();
-        
+
         waitForButton();
         gameState = MAINMENU;
         tunes.stopScore();
       }
+      arduboy.display();
 
       break;
 
