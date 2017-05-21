@@ -18,7 +18,7 @@ ArduboyPlaytune tunes(arduboy.audio.enabled);
 
 const byte MAINMENU = 255, SPLASH = 2, INTRO = 254, GAMEOVER = 253, END = 252, WIN = 251, LOSE = 250,
            STARTLEVEL = 249, STARTLEVELINTRO = 248, PLAYING = 1;
-const int INVALID = -32768;
+const int INVALID = -32768, EEPROM_START = EEPROM_STORAGE_SPACE_START + 100;
 
 // ------ Game parameters -------
 const char STARTLIVES = 3, STARTINGLEVEL = 0;
@@ -27,9 +27,10 @@ int FORWARD_BOOST = 12; // Use higher value to make the player jump further.
 
 char lives = STARTLIVES;
 
-unsigned long currentFrame = 0, elapsedTime = 0;
-byte currentLevel = STARTINGLEVEL, gameState =/* SPLASH;//*/MAINMENU;
+unsigned long currentFrame = 0, currentLevelTime = 0;
+byte currentLevel = STARTINGLEVEL, gameState = SPLASH;
 unsigned long wait = 0, debounce = 0;
+int score = 0, highscore = 0;
 char specialCar;
 double playerx, playery;
 
@@ -49,6 +50,9 @@ void setup() {
   delay(1000);
   Serial.println("Debug enabled");
 #endif
+
+// Load highscore
+highscore = getHiScore();
 }
 
 void initializeAudio()

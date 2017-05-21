@@ -30,13 +30,24 @@ void loop()
       if (wait < millis())
       {
         // Show gameover text
-        arduboy.setCursor(38, 29);
+        arduboy.setCursor(12, 25);
+        arduboy.setTextSize(2);
         arduboy.print("GAME OVER");
+        arduboy.setTextSize(1);
       }
-      arduboy.display();
 
       if (millis() > debounce)
       {
+        // Show score
+        arduboy.setCursor(0, arduboy.height() - 7);
+        arduboy.print("Score: ");
+        arduboy.print(score);
+
+        arduboy.setCursor(0, 0);
+        arduboy.print("Hi-score: ");
+        arduboy.print(highscore);
+        arduboy.display();
+        
         waitForButton();
         gameState = MAINMENU;
         tunes.stopScore();
@@ -70,7 +81,7 @@ void loop()
     case STARTLEVEL:
       for (byte i = 0; i < enemiesMax; i++)
         enemiesPos[i] = arduboy.height();
-      
+
       tunes.playScore(levelintro);
       playerx = INVALID;
       playery = INVALID;
@@ -82,7 +93,10 @@ void loop()
         playerx += 0.15;
 
       if (playerx > 3)
+      {
         gameState = PLAYING;
+        currentLevelTime = millis();
+      }
 
     default: // Level
       if (!tunes.playing() && gameState == PLAYING)

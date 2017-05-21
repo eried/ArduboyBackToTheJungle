@@ -71,6 +71,22 @@ void animateDialog(const unsigned char animal[], const unsigned char str[], bool
         arduboy.print(c);
         break;
 
+      case '$':
+        arduboy.print(highscore);
+        arduboy.display();
+        doWinSoundEffect();
+        break;
+
+      case '&':
+        arduboy.print(score);
+
+        if (score > 0)
+        {
+          arduboy.display();
+          doWinSoundEffect();
+        }
+        break;
+
       case '|':
         // Nothing
         break;
@@ -125,6 +141,17 @@ void doWinDialog()
 #endif
 
   doWinSoundEffect();
+
+  // Update current score
+  long elapsedTime = millis() - currentLevelTime;
+  score += (currentLevel + 1) * 100 + lives * 25 + (60-min(elapsedTime / 1000,60)); // Current level, lives and elapsed time (up to a minute) defines the score
+
+  // Save HI-SCORE
+  if (score > highscore)
+  {
+    highscore = score;
+    setHiScore(score);
+  }
 
   switch (currentLevel++)
   {

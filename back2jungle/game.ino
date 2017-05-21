@@ -104,12 +104,24 @@ int doGame(bool interactive)
       enemiesPos[enemy] += enemies[e].vy;
 
       if (playerx + player.width >= enemies[e].x && playerx <= enemies[e].x + specs.width)
-        arduboy.drawBitmap(enemies[e].x, floor(enemiesPos[enemy]), specs.mask, specs.width, specs.height, BLACK);
-      arduboy.drawBitmap(enemies[e].x, floor(enemiesPos[enemy]), specs.bitmap, specs.width, specs.height);
+        arduboy.drawBitmap(enemies[e].x, floor(enemiesPos[enemy]), specialCar == e ? car2mask : specs.mask , specs.width, specs.height, BLACK);
+      arduboy.drawBitmap(enemies[e].x, floor(enemiesPos[enemy]), specialCar == e ? car2 : specs.bitmap, specs.width, specs.height);
 
       // Loop
       if (enemiesPos[enemy] < -32)
+      {
         enemiesPos[enemy] = arduboy.height();
+
+        if (specialCar == e)
+          specialCar = -1;
+        else if (specialCar == -1 && enemies[e].type == CAR)
+          if (random(0, 30) == 7)
+          {
+            tunes.stopScore();
+            tunes.playScore(car2music);
+            specialCar = e;
+          }
+      }
 
       // Check collision
       if (arduboy.collide({(byte)playerx + 2, (byte)playery + 2, (byte)(player.width - 4), (byte)(player.height - 4)},
@@ -146,9 +158,9 @@ void doMainMenu()
 
   // Track menu movement pattern
   byte pos = 0;
-  const byte max = 16;
-  byte seq[] = {2, 1, 2, 2, 1, 1, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2};
-  byte mov[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+  const byte max = 17;
+  byte seq[] = {2, 1, 2, 2, 1, 1, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2, 2};
+  byte mov[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
   do {
     doIntroTheme();
@@ -161,8 +173,9 @@ void doMainMenu()
     {
       case 0: arduboy.setCursor(33, 55); arduboy.print("Start game"); break;
       case 1: arduboy.setCursor(33, 55); arduboy.print("Sound: "); arduboy.print(arduboy.audio.enabled() ? " ON" : "OFF"); break;
-      case 2: arduboy.setCursor(42, 55); arduboy.print("Credits"); break;
-      case 3: arduboy.setCursor(52, 55); arduboy.print("Help"); break;
+      case 2: arduboy.setCursor(39, 55); arduboy.print("Hi-score"); break;
+      case 3: arduboy.setCursor(43, 55); arduboy.print("Credits"); break;
+      case 4: arduboy.setCursor(52, 55); arduboy.print("Help"); break;
     }
     arduboy.setCursor(arduboy.width() - 24 - 8, 55);
     arduboy.print((char)0x10);
@@ -199,8 +212,9 @@ void doMainMenu()
             }
           } break;
         case 1: tunes.stopScore(); arduboy.audio.toggle(); arduboy.audio.saveOnOff(); break;
-        case 2: animateDialog(qr, credits0); waitForButton(); animateDialog(qr, credits01); waitForButton(); animateDialog(qr, credits1); waitForButton(); break;
-        case 3: animateDialog(monkey2, tip0); doRandomTip(); waitForButton(); break;
+        case 2: animateDialog(monkey2, (score == 0 && highscore == 0) ? hiscore0 : hiscore1); waitForButton(); break;
+        case 3: animateDialog(qr, credits0); waitForButton(); animateDialog(qr, credits01); waitForButton(); animateDialog(qr, credits1); waitForButton(); break;
+        case 4: animateDialog(monkey2, tip0); doRandomTip(); waitForButton(); break;
       }
     }
     else
@@ -220,7 +234,7 @@ void doMainMenu()
       }
 
       pos %= max; // Bounded
-      option = option < 0 ? 3 : (option > 3 ? 0 : option);
+      option = option < 0 ? 4 : (option > 4 ? 0 : option);
     }
   } while (!exit);
 
