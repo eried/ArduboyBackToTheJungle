@@ -15,12 +15,13 @@ void loop()
       break;
 
     case INTRO:
+      doIntro();
+
+    case SKIPINTRO:
       specialCarBonus = false;
       score = 0;
       currentLevel = 0;
       lives = STARTLIVES;
-
-      doIntro();
       gameState = STARTLEVEL;
       break;
 
@@ -46,12 +47,24 @@ void loop()
         arduboy.print(score);
 
         arduboy.setCursor(0, 0);
-        arduboy.print("Hi-score: ");
+        arduboy.print("Hi: ");
         arduboy.print(highscore);
+
+        while (arduboy.pressed(A_BUTTON + B_BUTTON)); // Wait for button release
+
+        arduboy.setCursor(arduboy.width() - 40, 0);
+        arduboy.print("Retry");
+        arduboy.setCursor(arduboy.width() - 34, arduboy.height() - 7);
+        arduboy.print("Menu");
         arduboy.display();
 
-        waitForButton();
-        gameState = MAINMENU;
+        do
+        {
+          if ( waitForButton(false))
+            gameState = MAINMENU;
+          else if ( waitForButton(false, true, arduboy.height()))
+            gameState = SKIPINTRO;
+        } while (gameState == END);
         tunes.stopScore();
       }
       arduboy.display();

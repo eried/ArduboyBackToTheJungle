@@ -39,5 +39,5 @@ unsigned char const tip7[] PROGMEM  = "Boost with A_and release_the button_fast 
 unsigned char const tip8[] PROGMEM  = "Boosting_with A needs_perfect_timing for_faster_movement\0";
 unsigned char const tip9[] PROGMEM  = "I AM_ERROR.\0";
 unsigned char const credits0[] PROGMEM  = "Code and_graphics by:__Erwin Ried_erw|i|n\x40r|ie|d.|cl_ww|w.r|ie|d.cl%%%%\0";
-unsigned char const credits01[] PROGMEM  = "Working_title:_back2jungle__Version 1.4_20170522\0";
+unsigned char const credits01[] PROGMEM  = "Working_title:_back2jungle__Version 1.4.1_20170522\0";
 unsigned char const credits1[] PROGMEM  = "T|hanks to:__Ma|r|ian|a_Si|mon_Ardu|boy t|eam_KBCamper\0";

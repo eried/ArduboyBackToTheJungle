@@ -16,7 +16,7 @@
 Arduboy2 arduboy;
 ArduboyPlaytune tunes(arduboy.audio.enabled);
 
-const byte MAINMENU = 255, SPLASH = 2, INTRO = 254, GAMEOVER = 253, END = 252, WIN = 251, LOSE = 250,
+const byte MAINMENU = 255, SPLASH = 2, INTRO = 254, SKIPINTRO = 247, GAMEOVER = 253, END = 252, WIN = 251, LOSE = 250,
            STARTLEVEL = 249, STARTLEVELINTRO = 248, PLAYING = 1;
 const int INVALID = -32768, EEPROM_START = EEPROM_STORAGE_SPACE_START + 100;
 
