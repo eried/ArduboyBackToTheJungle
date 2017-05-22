@@ -1,7 +1,7 @@
 // Holds the game until B is pressed (or returns B state if is not modal)
 bool waitForButton(bool isModal = true, bool useAlternativeButton = false, byte offset = 7)
 {
-  arduboy.drawBitmap(arduboy.width() - 8, arduboy.height() - offset, useAlternativeButton?nextAlt:next, 8, 7);
+  arduboy.drawBitmap(arduboy.width() - 8, arduboy.height() - offset, useAlternativeButton ? nextAlt : next, 8, 7);
 
 #ifdef MIRRORING
   Serial.write(arduboy.getBuffer(), arduboy.width() * arduboy.height() / 8);
@@ -10,13 +10,13 @@ bool waitForButton(bool isModal = true, bool useAlternativeButton = false, byte 
 
   if (isModal)
   {
-    while (arduboy.pressed(useAlternativeButton?A_BUTTON:B_BUTTON)) {};
-    while (arduboy.notPressed(useAlternativeButton?A_BUTTON:B_BUTTON)) {};
-    while (arduboy.pressed(useAlternativeButton?A_BUTTON:B_BUTTON)) {};
+    while (arduboy.pressed(useAlternativeButton ? A_BUTTON : B_BUTTON)) {};
+    while (arduboy.notPressed(useAlternativeButton ? A_BUTTON : B_BUTTON)) {};
+    while (arduboy.pressed(useAlternativeButton ? A_BUTTON : B_BUTTON)) {};
     return true;
   }
   else
-    return arduboy.pressed(useAlternativeButton?A_BUTTON:B_BUTTON);
+    return arduboy.pressed(useAlternativeButton ? A_BUTTON : B_BUTTON);
 }
 
 // Displays an animal image with an animated dialog and optionally the remaining lifes
@@ -144,7 +144,7 @@ void doWinDialog()
 
   // Update current score
   long elapsedTime = millis() - currentLevelTime;
-  score += (currentLevel + 1) * 100 + lives * 25 + (60-min(elapsedTime / 1000,60)); // Current level, lives and elapsed time (up to a minute) defines the score
+  score += (currentLevel + 1) * 100 + lives * 25 + (60 - min(elapsedTime / 1000, 60)); // Current level, lives and elapsed time (up to a minute) defines the score
 
   // Save HI-SCORE
   if (score > highscore)
@@ -206,6 +206,8 @@ void doWinDialog()
         arduboy.display();
 
       } while (millis() < wait || !waitForButton(false));
+
+      while (!arduboy.notPressed(A_BUTTON + B_BUTTON)); // Wait for button release
 
       animateDialog(monkeybig, playing93);
       animateDialog(giraffebig, playing94);

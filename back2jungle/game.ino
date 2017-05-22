@@ -117,7 +117,7 @@ int doGame(bool interactive)
         else if (specialCar == -1 && enemies[e].type == CAR)
           if (random(0, 50) == 7)
           {
-            if(specialCarBonus)
+            if (specialCarBonus)
             {
               score += 500;
               specialCarBonus = false;
