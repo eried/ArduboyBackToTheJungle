@@ -15,6 +15,8 @@ void loop()
       break;
 
     case INTRO:
+      specialCarBonus = false;
+      score = 0;
       currentLevel = 0;
       lives = STARTLIVES;
 

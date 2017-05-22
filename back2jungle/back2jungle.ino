@@ -32,6 +32,7 @@ byte currentLevel = STARTINGLEVEL, gameState = SPLASH;
 unsigned long wait = 0, debounce = 0;
 int score = 0, highscore = 0;
 char specialCar;
+bool specialCarBonus = true;
 double playerx, playery;
 
 void setup() {
