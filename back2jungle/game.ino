@@ -42,6 +42,13 @@ int doGame(bool interactive)
 
   if (interactive)
   {
+    if (arduboy.pressed(B_BUTTON))
+    {
+      // Pause game
+      doPause();
+      return 1;
+    }
+
     int multiplier = 1;
     if ( millis() > debounce)
     {

@@ -1,3 +1,17 @@
+// Pause game
+void doPause()
+{
+  tunes.stopScore();
+  tunes.playScore(pause);
+  arduboy.invert(true);
+  arduboy.setCursor(47,28);
+  arduboy.print("PAUSED");
+  arduboy.display();
+  arduboy.delayShort(300);
+  waitForButton();
+  arduboy.invert(false);
+}
+
 // Animal crashed with a car
 void doCrash()
 {
