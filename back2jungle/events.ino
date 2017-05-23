@@ -80,8 +80,8 @@ void doSplash()
   for (int i = -8; i < 26; i = i + 1)
   {
     arduboy.clear();
-    arduboy.setCursor(4, i);
-    arduboy.print("Innovation Garage AS");
+    arduboy.setCursor(13, i);
+    arduboy.print("Innovation Garage");
     arduboy.display();
     arduboy.delayShort(20);
   }
