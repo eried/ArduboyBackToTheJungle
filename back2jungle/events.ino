@@ -47,26 +47,22 @@ void doIntro()
 void doRandomTip()
 {
   byte r = random(0, 30);
-  unsigned char const * tip = nullptr;
+  unsigned char const * tip = tip3; // 5/30 chance
+  if (r >= 21) // 9/30 chance
+    tip = tip1;
+  else if (r >= 15) // 5/30 chance
+    tip = tip2;
+  else if (r >= 10) //  5/30 chance
+    tip = tip4;
+  else
   switch (r)
   {
-    // About 3% chance each
-    case 7: tip = tip8; break;
+    // About 1/30 chance each
     case 2: tip = tip7; break;
     case 4: tip = tip9; break;
     case 5: tip = tip6; break;
     case 6: tip = tip5; break;
-
-    default:
-
-      if (r > 20) // 33% chance
-        tip = tip1;
-      else if (r > 14) //
-        tip = tip2;
-      else if (r > 9)
-        tip = tip4;
-      else
-        tip = tip3;
+    case 7: tip = tip8; break;
   }
   animateDialog(monkey2, tip);
 }
