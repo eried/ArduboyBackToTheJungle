@@ -1,7 +1,7 @@
 // Main game loop, use interactive false for the level intro
-int doGame(bool interactive)
+GameState doGame(bool interactive)
 {
-  byte exitCode = !interactive ? STARTLEVELINTRO : ( playerx > arduboy.width() - 3 ? WIN : PLAYING);
+  GameState exitCode = !interactive ? GameState::StartLevelIntro : ( playerx > arduboy.width() - 3 ? GameState::Win : GameState::Playing);
   arduboy.clear();
 
   // Streets
@@ -46,7 +46,7 @@ int doGame(bool interactive)
     {
       // Pause game
       doPause();
-      return 1;
+      return GameState::Playing;
     }
 
     int multiplier = 1;
@@ -140,7 +140,7 @@ int doGame(bool interactive)
       {enemies[e].x + 2, (byte)(enemiesPos[enemy] + 2), (byte)(specs.width - 4), (byte)(specs.height - 4)}))
       {
         doCrash();
-        exitCode = LOSE;
+        exitCode = GameState::Lose;
       }
     }
     enemy++;
@@ -254,5 +254,5 @@ void doMainMenu()
   tunes.tone(987, 120);
   arduboy.delayShort(60);
   tunes.tone(1318, 400);
-  gameState = INTRO;
+  gameState = GameState::Intro;
 }

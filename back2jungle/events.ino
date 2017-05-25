@@ -88,7 +88,7 @@ void doSplash()
   arduboy.print("presents");
   arduboy.display();
   arduboy.delayShort(2000);
-  gameState = MAINMENU;
+  gameState = GameState::MainMenu;
 }
 
 // Starts the menu music
