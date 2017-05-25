@@ -31,7 +31,7 @@ unsigned long currentFrame = 0, currentLevelTime = 0;
 byte currentLevel = STARTINGLEVEL, gameState = SPLASH;
 unsigned long wait = 0, debounce = 0;
 int score = 0, highscore = 0;
-char specialCar;
+unsigned char specialCar;
 bool specialCarBonus = true, fasterDialogs = false;
 double playerx, playery;
 
