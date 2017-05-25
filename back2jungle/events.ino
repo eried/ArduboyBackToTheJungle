@@ -47,27 +47,24 @@ void doIntro()
 void doRandomTip()
 {
   byte r = random(0, 30);
-
+  unsigned char const * tip = tip3; // 5/30 chance
+  if (r >= 21) // 9/30 chance
+    tip = tip1;
+  else if (r >= 15) // 5/30 chance
+    tip = tip2;
+  else if (r >= 10) //  5/30 chance
+    tip = tip4;
+  else
   switch (r)
   {
-    // About 3% chance each
-    case 7: animateDialog(monkey2, tip8); break;
-    case 2: animateDialog(monkey2, tip7); break;
-    case 4: animateDialog(monkey2, tip9); break;
-    case 5: animateDialog(monkey2, tip6); break;
-    case 6: animateDialog(monkey2, tip5); break;
-
-    default:
-
-      if (r > 20) // 33% chance
-        animateDialog(monkey2, tip1);
-      else if (r > 14) //
-        animateDialog(monkey2, tip2);
-      else if (r > 9)
-        animateDialog(monkey2, tip4);
-      else
-        animateDialog(monkey2, tip3);
+    // About 1/30 chance each
+    case 2: tip = tip7; break;
+    case 4: tip = tip9; break;
+    case 5: tip = tip6; break;
+    case 6: tip = tip5; break;
+    case 7: tip = tip8; break;
   }
+  animateDialog(monkey2, tip);
 }
 
 // Splash animation
