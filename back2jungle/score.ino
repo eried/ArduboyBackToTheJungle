@@ -23,7 +23,7 @@ unsigned int getHiScore()
 }
 
 // Save the high score
-void setHiScore(unsigned int score)
+void setHiScore(const unsigned int & score)
 {
   EEPROM.write(EEPROM_START, CRC);
   EEPROM_writeAnything(EEPROM_START + OFFSET, score);
