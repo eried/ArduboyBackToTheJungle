@@ -16,22 +16,6 @@
 Arduboy2 arduboy;
 ArduboyPlaytune tunes(arduboy.audio.enabled);
 
-enum class GameState : unsigned char
-{
-  None,
-  Playing,
-  Splash,
-  SkipIntro,
-  StartLevelIntro,
-  StartLevel,
-  Lose,
-  Win,
-  End,
-  GameOver,
-  Intro,
-  MainMenu,
-};
-
 const int INVALID = -32768, EEPROM_START = EEPROM_STORAGE_SPACE_START + 100;
 
 // ------ Game parameters -------
