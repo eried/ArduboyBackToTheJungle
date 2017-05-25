@@ -2,12 +2,12 @@ unsigned char const intro1[] PROGMEM  = "%%%%%%Hey guys,% I_guess we are_all awa
 unsigned char const intro2[] PROGMEM  = "Yeah, what_about that?%\0";
 unsigned char const intro3[] PROGMEM  = "Well, the_thing is_that there_is a jungle_past that_highway\0";
 unsigned char const intro4[] PROGMEM  = "tsssssssss_....tss... %%%%%%%___sss.\0";
-unsigned char const intro5[] PROGMEM  = "Exactly! we_will risk_our lives to_cross the_highway and_be free%!%!%!%\0";
+unsigned char const intro5[] PROGMEM  = "Exactly!% We_will risk_our lives to_cross the_highway and_be free%!%!%!%\0";
 unsigned char const intro51[] PROGMEM  = "Remember: we_have few_bandages, so_do not get_injured._%%We all have_to make it!%%%\0";
 unsigned char const intro6[] PROGMEM  = "Let's go!,_snake you_are the_smallest,_you go_first.\0";
 unsigned char const intro7[] PROGMEM  = "%%%%tss.\0";
 
-unsigned char const gameover1[] PROGMEM  = "Careful!_We only have_few bandages_from the_Zoo's first_aid kit\0";
+unsigned char const gameover1[] PROGMEM  = "Careful!%_We only_have a few_bandages_from the_Zoo's first_aid kit\0";
 unsigned char const gameover2[] PROGMEM  = "Oh no! some_of our dear_friends will_be stuck in_the Zoo_%F%O%R%E%V%E%R%.%.%.%\0";
 
 unsigned char const playing1[] PROGMEM  = "%%%%TSSS!!_ssss.\0";
