@@ -1,10 +1,10 @@
 const byte CRC = 0xAE, OFFSET = 2;
-const int CRC_C = 48000;
+const unsigned int CRC_C = 48000;
 
 // Get the high score
-int getHiScore()
+unsigned int getHiScore()
 {
-  int score, crc;
+  unsigned int score, crc;
 
   bool isValid = false;
   if (EEPROM.read(EEPROM_START) == CRC)
@@ -23,7 +23,7 @@ int getHiScore()
 }
 
 // Save the high score
-void setHiScore(int score)
+void setHiScore(unsigned int score)
 {
   EEPROM.write(EEPROM_START, CRC);
   EEPROM_writeAnything(EEPROM_START + OFFSET, score);
