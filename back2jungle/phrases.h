@@ -2,8 +2,8 @@ unsigned char const intro1[] PROGMEM  = "%%%%%%Hey guys,% I_guess we are_all awa
 unsigned char const intro2[] PROGMEM  = "Yeah, what_about that?%\0";
 unsigned char const intro3[] PROGMEM  = "Well, the_thing is_that there_is a jungle_past that_highway\0";
 unsigned char const intro4[] PROGMEM  = "tsssssssss_....tss... %%%%%%%___sss.\0";
-unsigned char const intro5[] PROGMEM  = "Exactly!% We_will risk_our lives to_cross the_highway and_be free%!%!%!%\0";
-unsigned char const intro51[] PROGMEM  = "Remember: we_have few_bandages, so_do not get_injured._%%We all have_to make it!%%%\0";
+unsigned char const intro5[] PROGMEM  = "Exactly!%_We will risk_our lives to_cross the_highway and_be free%!%!%!%\0";
+unsigned char const intro51[] PROGMEM  = "Remember:_We have very_few bandages, so_do not get_injured._%%We all have_to make it!%%%\0";
 unsigned char const intro6[] PROGMEM  = "Let's go!,_snake you_are the_smallest,_you go_first.\0";
 unsigned char const intro7[] PROGMEM  = "%%%%tss.\0";
 
