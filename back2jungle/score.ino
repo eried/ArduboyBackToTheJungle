@@ -15,6 +15,10 @@ int getHiScore()
     if (score + crc == CRC_C)
       isValid = true;
   }
+
+  if (score > 500) // At least the user passed the second screen
+    fasterDialogs = true;
+
   return isValid ? score : 0;
 }
 

@@ -93,9 +93,9 @@ void animateDialog(const unsigned char animal[], const unsigned char str[], bool
 
       default:
         arduboy.print(c);
-        tunes.tone(900, doDelays ? 20 : 10);
+        tunes.tone(900, doDelays ? 20 : ((fasterDialogs && gameState != MAINMENU) ? 1 : 10));
         arduboy.display();
-        arduboy.delayShort(doDelays ? 100 : 12);
+        arduboy.delayShort(doDelays ? 100 : ((fasterDialogs && gameState != MAINMENU) ? 1 : 12));
         break;
     }
 
@@ -108,7 +108,7 @@ void animateDialog(const unsigned char animal[], const unsigned char str[], bool
 #endif
 
   arduboy.display();
-  arduboy.delayShort(doDelays ? 1500 : 300);
+  arduboy.delayShort(doDelays ? 1500 : ((fasterDialogs && gameState != MAINMENU) ? 10 : 300));
 
   while (arduboy.pressed(B_BUTTON));
 }
