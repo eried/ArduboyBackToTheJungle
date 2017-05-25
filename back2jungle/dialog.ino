@@ -19,8 +19,8 @@ bool waitForButton(bool isModal = true, bool useAlternativeButton = false, byte 
     return arduboy.pressed(useAlternativeButton ? A_BUTTON : B_BUTTON);
 }
 
-// Displays an animal image with an animated dialog and optionally the remaining lifes
-void animateDialog(const unsigned char animal[], const unsigned char str[], bool showLifes = false)
+// Displays an animal image with an animated dialog and optionally the remaining lives
+void animateDialog(const unsigned char animal[], const unsigned char str[], bool showLives = false)
 {
   const int xposimage = 0;
   const int xpostext = 52;
@@ -28,7 +28,7 @@ void animateDialog(const unsigned char animal[], const unsigned char str[], bool
 
   arduboy.clear();
 
-  if (showLifes)
+  if (showLives)
   {
     ypos = 0;
 
