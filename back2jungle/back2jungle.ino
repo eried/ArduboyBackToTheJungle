@@ -51,8 +51,8 @@ void setup() {
   Serial.println("Debug enabled");
 #endif
 
-// Load highscore
-highscore = getHiScore();
+  // Load highscore
+  highscore = getHiScore();
 }
 
 void initializeAudio()

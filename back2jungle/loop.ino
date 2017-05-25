@@ -50,7 +50,7 @@ void loop()
         arduboy.print("Hi: ");
         arduboy.print(highscore);
 
-        while (!arduboy.notPressed(A_BUTTON+B_BUTTON)); // Wait for button release
+        while (!arduboy.notPressed(A_BUTTON + B_BUTTON)); // Wait for button release
 
         arduboy.setCursor(arduboy.width() - 40, 0);
         arduboy.print("Retry");
@@ -66,7 +66,7 @@ void loop()
             gameState = GameState::SkipIntro;
         } while (gameState == GameState::End);
 
-        while (!arduboy.notPressed(A_BUTTON+B_BUTTON)); // Wait for button release
+        while (!arduboy.notPressed(A_BUTTON + B_BUTTON)); // Wait for button release
         tunes.stopScore();
       }
       arduboy.display();
