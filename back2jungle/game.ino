@@ -225,7 +225,7 @@ void doMainMenu()
           } break;
         case 1: tunes.stopScore(); arduboy.audio.toggle(); arduboy.audio.saveOnOff(); break;
         case 2: animateDialog(monkey2, (score == 0 && highscore == 0) ? hiscore0 : hiscore1); waitForButton(); break;
-        case 3: animateDialog(qr, credits0); waitForButton(); animateDialog(qr, credits01); waitForButton(); animateDialog(qr, credits1); waitForButton(); break;
+        case 3: animateDialog(qr, credits0); waitForButton(); animateDialog(qr, credits01); waitForButton(); animateDialog(qr, credits1); animateDialog(qr, credits2); waitForButton(); break;
         case 4: animateDialog(monkey2, tip0); doRandomTip(); waitForButton(); break;
       }
     }
