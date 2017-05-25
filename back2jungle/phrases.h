@@ -6,8 +6,10 @@ unsigned char const intro5[] PROGMEM  = "Exactly! we_will risk_our lives to_cros
 unsigned char const intro51[] PROGMEM  = "Remember: we_have few_bandages, so_do not get_injured._%%We all have_to make it!%%%\0";
 unsigned char const intro6[] PROGMEM  = "Let's go!,_snake you_are the_smallest,_you go_first.\0";
 unsigned char const intro7[] PROGMEM  = "%%%%tss.\0";
+
 unsigned char const gameover1[] PROGMEM  = "Careful!_We only have_few bandages_from the_Zoo's first_aid kit\0";
 unsigned char const gameover2[] PROGMEM  = "Oh no! some_of our dear_friends will_be stuck in_the Zoo_%F%O%R%E%V%E%R%.%.%.%\0";
+
 unsigned char const playing1[] PROGMEM  = "%%%%TSSS!!_ssss.\0";
 unsigned char const playing2[] PROGMEM  = "I know!,_you did it_snake #1 of_#65535. You_are next_snake #2!\0";
 unsigned char const playing3[] PROGMEM  = "I know!,_you did it_snake #2 of_#65535. You_are next_snake #3!\0";
@@ -28,6 +30,7 @@ unsigned char const playing96[] PROGMEM  = "No monkey!!_NOOOOOO!%%%%\0";
 unsigned char const playing97[] PROGMEM  = "%t%s%%%%s%%s%%s%s%S%SH*T!!__We% are%_F***ING_going %BACK_IN% TIME!!!!\0";
 unsigned char const hiscore0[] PROGMEM  = "Mr. Mico:__There is_no high_score.\0";
 unsigned char const hiscore1[] PROGMEM  = "Mr. Mico:__The highest_is $_Your current_is &";
+
 unsigned char const tip0[] PROGMEM  = "Mr. Mico:__Let me give_you a hint_..%.%.%.\0";
 unsigned char const tip1[] PROGMEM  = "You can_move in_diagonal\0";
 unsigned char const tip2[] PROGMEM  = "Move the_animal to_the far_right side_to win\0";
@@ -38,6 +41,7 @@ unsigned char const tip6[] PROGMEM  = "Boost with A_in diagonal_for best_results
 unsigned char const tip7[] PROGMEM  = "Boost with A_and release_the button_fast for_faster boost_reload\0";
 unsigned char const tip8[] PROGMEM  = "Boosting_with A needs_perfect_timing for_faster_movement\0";
 unsigned char const tip9[] PROGMEM  = "I AM_ERROR.\0";
+
 unsigned char const credits0[] PROGMEM  = "Code and_graphics by:__Erwin Ried_erw|i|n\x40r|ie|d.|cl_ww|w.r|ie|d.cl%%%%\0";
 unsigned char const credits01[] PROGMEM  = "Working_title:_back2jungle__Version 1.6.1_20170523\0";
 unsigned char const credits1[] PROGMEM  = "T|hanks to:__Ma|r|ian|a_Si|mon_Ardu|boy t|eam_KBCamper\0";
