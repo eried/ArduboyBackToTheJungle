@@ -47,7 +47,7 @@ void animateDialog(const unsigned char animal[], const unsigned char str[], bool
   int pos = ypos;
   arduboy.setCursor(xpostext, pos);
 
-  for (byte i = 0; i < 255; i++)
+  for (byte i = 0; i < BYTE_MAX; i++)
   {
     char c = pgm_read_byte(str++);
 

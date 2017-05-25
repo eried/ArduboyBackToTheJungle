@@ -120,8 +120,8 @@ GameState doGame(bool interactive)
         enemiesPos[enemy] = arduboy.height();
 
         if (specialCar == e)
-          specialCar = 255;
-        else if (specialCar == 255 && enemies[e].type == CAR)
+          specialCar = BYTE_MAX;
+        else if (specialCar == BYTE_MAX && enemies[e].type == CAR)
           if (random(0, 50) == 7)
           {
             if (specialCarBonus)

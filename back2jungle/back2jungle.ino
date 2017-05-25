@@ -17,6 +17,7 @@ Arduboy2 arduboy;
 ArduboyPlaytune tunes(arduboy.audio.enabled);
 
 const int INVALID = -32768, EEPROM_START = EEPROM_STORAGE_SPACE_START + 100;
+const byte BYTE_MAX = 0xFF;
 
 // ------ Game parameters -------
 const char STARTLIVES = 3, STARTINGLEVEL = 0;
@@ -26,11 +27,10 @@ int FORWARD_BOOST = 12; // Use higher value to make the player jump further.
 char lives = STARTLIVES;
 
 unsigned long currentFrame = 0, currentLevelTime = 0;
-byte currentLevel = STARTINGLEVEL;
+byte currentLevel = STARTINGLEVEL, specialCar;
 GameState gameState = GameState::Splash;
 unsigned long wait = 0, debounce = 0;
 unsigned int score = 0, highscore = 0;
-unsigned char specialCar;
 bool specialCarBonus = true, fasterDialogs = false;
 double playerx, playery;
 

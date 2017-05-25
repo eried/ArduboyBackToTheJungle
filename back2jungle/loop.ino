@@ -104,7 +104,7 @@ void loop()
       playerx = INVALID;
       playery = INVALID;
       currentFrame = 0;
-      specialCar = 255;
+      specialCar = BYTE_MAX;
 
     case GameState::StartLevelIntro:
       if (playerx != INVALID)
