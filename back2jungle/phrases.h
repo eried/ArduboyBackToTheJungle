@@ -32,13 +32,13 @@ unsigned char const hiscore0[] PROGMEM  = "Mr. Mico:__There is_no high_score.\0"
 unsigned char const hiscore1[] PROGMEM  = "Mr. Mico:__The highest_is $_Your current_is &";
 
 unsigned char const tip0[] PROGMEM  = "Mr. Mico:__Let me give_you a hint_..%.%.%.\0";
-unsigned char const tip1[] PROGMEM  = "You can_move in_diagonal\0";
+unsigned char const tip1[] PROGMEM  = "You_can_move_diagonally\0";
 unsigned char const tip2[] PROGMEM  = "Move the_animal to_the far_right side_to win\0";
-unsigned char const tip3[] PROGMEM  = "You can_edit the_sourcecode_if the game_gets hard..._cheater!\0";
-unsigned char const tip4[] PROGMEM  = "All animals_use a_rectangle to_collide due_lazy coding\0";
+unsigned char const tip3[] PROGMEM  = "You can_edit the_source code_if the game_gets hard...%_cheater!\0";
+unsigned char const tip4[] PROGMEM  = "All animals_use a_rectangle_to collide_due to_lazy coding\0";
 unsigned char const tip5[] PROGMEM  = "Press A to_get a small_boost while_moving the_animal\0";
-unsigned char const tip6[] PROGMEM  = "Boost with A_in diagonal_for best_results\0";
-unsigned char const tip7[] PROGMEM  = "Boost with A_and release_the button_fast for_faster boost_reload\0";
+unsigned char const tip6[] PROGMEM  = "Boost with A_when moving_diagonally_for best_results\0";
+unsigned char const tip7[] PROGMEM  = "Boost with A_and release_the button_quickly for_faster boost_reload\0";
 unsigned char const tip8[] PROGMEM  = "Boosting_with A needs_perfect_timing for_faster_movement\0";
 unsigned char const tip9[] PROGMEM  = "I AM_ERROR.\0";
 
