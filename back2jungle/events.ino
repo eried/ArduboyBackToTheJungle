@@ -4,7 +4,7 @@ void doPause()
   tunes.stopScore();
   tunes.playScore(pause);
   arduboy.invert(true);
-  arduboy.setCursor(47,28);
+  arduboy.setCursor(47, 28);
   arduboy.print("PAUSED");
   arduboy.display();
   arduboy.delayShort(300);
@@ -55,15 +55,15 @@ void doRandomTip()
   else if (r >= 10) //  5/30 chance
     tip = tip4;
   else
-  switch (r)
-  {
-    // About 1/30 chance each
-    case 2: tip = tip7; break;
-    case 4: tip = tip9; break;
-    case 5: tip = tip6; break;
-    case 6: tip = tip5; break;
-    case 7: tip = tip8; break;
-  }
+    switch (r)
+    {
+      // About 1/30 chance each
+      case 2: tip = tip7; break;
+      case 4: tip = tip9; break;
+      case 5: tip = tip6; break;
+      case 6: tip = tip5; break;
+      case 7: tip = tip8; break;
+    }
   animateDialog(monkey2, tip);
 }
 
