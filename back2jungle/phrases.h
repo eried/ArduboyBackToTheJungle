@@ -13,7 +13,6 @@ unsigned char const gameover2[] PROGMEM  = "Oh no! some_of our dear_friends will
 unsigned char const playing1[] PROGMEM  = "%%%%TSSS!!_ssss.\0";
 unsigned char const playing2[] PROGMEM  = "I know!_You did it_snake #1 of_#65535. You_are next_snake #2!\0";
 unsigned char const playing3[] PROGMEM  = "I know!_You did it_snake #2 of_#65535. You_are next_snake #3!^\0";
-//unsigned char const playing4[] PROGMEM  = "I am just_kidding,_the penguin_is the next_one!\0";
 unsigned char const playing4[] PROGMEM  = "%%%%JUST KIDDING!%%_Our Zoo did_not have any_budget LOL!_Penguin! you_go now!\0";
 unsigned char const playing41[] PROGMEM  = "Now the_prettiest,_strongest,_handsomest_most heroic_of all!^\0";
 unsigned char const playing5[] PROGMEM  = "Nice!_I did it!_Now for_the lion!_Be careful.\0";
@@ -45,5 +44,5 @@ unsigned char const tip9[] PROGMEM  = "I AM_ERROR.\0";
 
 unsigned char const credits0[] PROGMEM  = "Code and_graphics by:__Erwin Ried_erw|i|n\x40r|ie|d.|cl_ww|w.r|ie|d.cl%%%%\0";
 unsigned char const credits01[] PROGMEM  = "Working_title:_back2jungle__Version 1.7.1_20170525\0";
-unsigned char const credits1[] PROGMEM  = "T|hanks to:__Ma|r|ian|a_Si|mon_Ardu|boy t|eam_KBCamper\0";
-unsigned char const credits2[] PROGMEM  = "T|hanks to:__Pharap\0";
+unsigned char const credits1[] PROGMEM  = "T|hanks to:__Ma|r|ian|a_Si|mon_Ardu|boy t|eam\0";
+unsigned char const credits2[] PROGMEM  = "T|hanks to:__KBCamper_Pharap\0";
