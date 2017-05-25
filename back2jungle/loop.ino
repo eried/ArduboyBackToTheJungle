@@ -104,7 +104,7 @@ void loop()
       playerx = INVALID;
       playery = INVALID;
       currentFrame = 0;
-      specialCar = -1;
+      specialCar = 255;
 
     case STARTLEVELINTRO:
       if (playerx != INVALID)
