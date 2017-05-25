@@ -32,7 +32,7 @@ unsigned char const hiscore0[] PROGMEM  = "Mr. Mico:__There is_no high_score.\0"
 unsigned char const hiscore1[] PROGMEM  = "Mr. Mico:__The highest_is $_Your current_is &";
 
 unsigned char const tip0[] PROGMEM  = "Mr. Mico:__Let me give_you a hint_..%.%.%.\0";
-unsigned char const tip1[] PROGMEM  = "You_can_move_diagonally\0";
+unsigned char const tip1[] PROGMEM  = "You can move_diagonally\0";
 unsigned char const tip2[] PROGMEM  = "Move the_animal to_the far_right side_to win\0";
 unsigned char const tip3[] PROGMEM  = "You can_edit the_source code_if the game_gets hard...%_cheater!\0";
 unsigned char const tip4[] PROGMEM  = "All animals_use a_rectangle_to collide_due to_lazy coding\0";
