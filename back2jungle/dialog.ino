@@ -214,6 +214,7 @@ void doWinDialog()
       animateDialog(monkeybig, playing95);
       animateDialog(giraffebig, playing96);
       animateDialog(snakebig, playing1);
+      animateDialog(giraffebig, playing961);
 
       // Ending animation
       waitForButton();
