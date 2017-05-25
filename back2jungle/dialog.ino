@@ -91,11 +91,16 @@ void animateDialog(const unsigned char animal[], const unsigned char str[], bool
         // Nothing
         break;
 
+      case '^':
+        waitForButton();
+        break;
+
+
       default:
         arduboy.print(c);
-        tunes.tone(900, doDelays ? 20 : ((fasterDialogs && gameState != MAINMENU) ? 1 : 10));
+        tunes.tone(900, doDelays ? 20 : ((fasterDialogs && gameState != GameState::MainMenu) ? 1 : 10));
         arduboy.display();
-        arduboy.delayShort(doDelays ? 100 : ((fasterDialogs && gameState != MAINMENU) ? 1 : 12));
+        arduboy.delayShort(doDelays ? 100 : ((fasterDialogs && gameState != GameState::MainMenu) ? 1 : 12));
         break;
     }
 
@@ -108,7 +113,7 @@ void animateDialog(const unsigned char animal[], const unsigned char str[], bool
 #endif
 
   arduboy.display();
-  arduboy.delayShort(doDelays ? 1500 : ((fasterDialogs && gameState != MAINMENU) ? 10 : 300));
+  arduboy.delayShort(doDelays ? 1500 : ((fasterDialogs && gameState != GameState::MainMenu) ? 10 : 300));
 
   while (arduboy.pressed(B_BUTTON));
 }
@@ -163,13 +168,11 @@ void doWinDialog()
     case 1:
       animateDialog(snakebig, playing1);
       animateDialog(monkeybig, playing3);
-      waitForButton();
       animateDialog(monkeybig, playing4);
       break;
 
     case 2:
       animateDialog(monkeybig, playing41);
-      waitForButton();
       animateDialog(snakebig, intro7);
       break;
 
@@ -190,7 +193,6 @@ void doWinDialog()
       animateDialog(monkeybig, playing9);
       animateDialog(monkeybig, playing91);
       animateDialog(giraffebig, playing92);
-      waitForButton();
       bool blinking = 0;
       wait = millis() + 2000;
 

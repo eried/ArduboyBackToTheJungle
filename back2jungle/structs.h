@@ -1,5 +1,21 @@
 const byte CAR = 0, TRUCK = 1, BIKE = 2, SLIMBIKE = 3;
 
+enum class GameState : unsigned char
+{
+  None,
+  Playing,
+  Splash,
+  SkipIntro,
+  StartLevelIntro,
+  StartLevel,
+  Lose,
+  Win,
+  End,
+  GameOver,
+  Intro,
+  MainMenu,
+};
+
 struct enemySpecs {
   const byte width;
   const byte height;

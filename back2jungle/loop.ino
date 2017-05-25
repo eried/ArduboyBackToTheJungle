@@ -5,27 +5,27 @@ void loop()
 
   switch (gameState)
   {
-    case SPLASH:
+    case GameState::Splash:
       doIntroTheme();
       doSplash();
 
-    case MAINMENU:
+    case GameState::MainMenu:
       doIntroTheme();
       doMainMenu();
       break;
 
-    case INTRO:
+    case GameState::Intro:
       doIntro();
 
-    case SKIPINTRO:
+    case GameState::SkipIntro:
       specialCarBonus = false;
       score = 0;
       currentLevel = 0;
       lives = STARTLIVES;
-      gameState = STARTLEVEL;
+      gameState = GameState::StartLevel;
       break;
 
-    case END:
+    case GameState::End:
       if (!tunes.playing())
         tunes.playScore(gameovertheme);
 
@@ -61,10 +61,10 @@ void loop()
         do
         {
           if ( waitForButton(false))
-            gameState = MAINMENU;
+            gameState = GameState::MainMenu;
           else if ( waitForButton(false, true, arduboy.height()))
-            gameState = SKIPINTRO;
-        } while (gameState == END);
+            gameState = GameState::SkipIntro;
+        } while (gameState == GameState::End);
 
         while (!arduboy.notPressed(A_BUTTON+B_BUTTON)); // Wait for button release
         tunes.stopScore();
@@ -73,18 +73,18 @@ void loop()
 
       break;
 
-    case WIN:
+    case GameState::Win:
       doWinDialog();
-      gameState = STARTLEVEL;
+      gameState = GameState::StartLevel;
       break;
 
-    case GAMEOVER:
-    case LOSE:
+    case GameState::GameOver:
+    case GameState::Lose:
       if (--lives <= 0)
       {
         animateDialog(monkeybig, gameover2);
         arduboy.delayShort(1000);
-        gameState = END;
+        gameState = GameState::End;
         wait =  millis() + (arduboy.audio.enabled() ? 2000 : 0);
         debounce = wait + 2000;
       }
@@ -92,11 +92,11 @@ void loop()
       {
         animateDialog(monkeybig, gameover1, true);
         waitForButton();
-        gameState = STARTLEVEL;
+        gameState = GameState::StartLevel;
       }
       break;
 
-    case STARTLEVEL:
+    case GameState::StartLevel:
       for (byte i = 0; i < enemiesMax; i++)
         enemiesPos[i] = arduboy.height();
 
@@ -106,21 +106,21 @@ void loop()
       currentFrame = 0;
       specialCar = 255;
 
-    case STARTLEVELINTRO:
+    case GameState::StartLevelIntro:
       if (playerx != INVALID)
         playerx += 0.15;
 
       if (playerx > 3)
       {
-        gameState = PLAYING;
+        gameState = GameState::Playing;
         currentLevelTime = millis();
       }
 
     default: // Level
-      if (!tunes.playing() && gameState == PLAYING)
+      if (!tunes.playing() && gameState == GameState::Playing)
         tunes.playScore(level);
 
-      gameState = doGame(gameState == PLAYING);
+      gameState = doGame(gameState == GameState::Playing);
 
 #ifdef DEBUG
       Serial.print("PLAYING, NEXT STATE: ");
