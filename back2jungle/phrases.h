@@ -43,5 +43,6 @@ unsigned char const tip8[] PROGMEM  = "Boosting_with A needs_perfect_timing for_
 unsigned char const tip9[] PROGMEM  = "I AM_ERROR.\0";
 
 unsigned char const credits0[] PROGMEM  = "Code and_graphics by:__Erwin Ried_erw|i|n\x40r|ie|d.|cl_ww|w.r|ie|d.cl%%%%\0";
+unsigned char const credits01[] PROGMEM  = "Working_title:_back2jungle__Version 1.8_20170527\0";
 unsigned char const credits1[] PROGMEM  = "T|hanks to:__Ma|r|ian|a_Si|mon_Ardu|boy t|eam\0";
 unsigned char const credits2[] PROGMEM  = "T|hanks to:__KBCamper_Pharap\0";
